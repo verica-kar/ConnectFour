@@ -1,0 +1,91 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           cs340mp5
+version:        0.0.0
+author:         Verica Karanakova
+maintainer:     vkaranakova@hawk.iit.edu
+build-type:     Simple
+
+library
+  exposed-modules:
+      MP5a
+      MP5b
+  other-modules:
+      Paths_cs340mp5
+  hs-source-dirs:
+      src
+  build-depends:
+      HUnit
+    , HUnit-approx
+    , QuickCheck
+    , ansi-terminal
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , hspec
+    , mtl
+    , random
+    , random-shuffle
+    , split
+    , text
+  default-language: Haskell2010
+
+executable mp5
+  main-is: Main.hs
+  other-modules:
+      Paths_cs340mp5
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , HUnit-approx
+    , QuickCheck
+    , ansi-terminal
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , cs340mp5
+    , deepseq
+    , hspec
+    , mtl
+    , random
+    , random-shuffle
+    , split
+    , text
+  default-language: Haskell2010
+
+test-suite mp5-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      MP5Spec
+      Paths_cs340mp5
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , HUnit-approx
+    , QuickCheck
+    , ansi-terminal
+    , array
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , cs340mp5
+    , deepseq
+    , hspec
+    , mtl
+    , random
+    , random-shuffle
+    , split
+    , text
+  default-language: Haskell2010
